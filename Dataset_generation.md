@@ -94,7 +94,7 @@ ___
 
 To generate the datasets we build a 200 references images set from one large actual speckle images in which the 128x128 images were cropped randomly in order to obtain a variety of light and density. Each reference image is deformed 200 times with the chosen dataset generation method (GridC0, GridC1, GridC2, Yang, PBD). The parameters used to generate our datasets are given below.
 
-
+___
 Other dataset not tested here
 - DataSet from G. Wang, Y. Zhou, Z. Wang, J. Zhou, S. Xuan, X. Yao, Strainnet-ld: Large displacement digital image correlation based on deep learning and displacement-field decomposition, Optics and Lasers in Engineering 183 (2024) 108502. doi:https://doi.org/10.1016/j.optlaseng.2024.
 
