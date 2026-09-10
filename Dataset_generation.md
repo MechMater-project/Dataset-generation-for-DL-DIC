@@ -5,7 +5,7 @@ There are two main types of methods:
 -Grid node based method: Grid-based methods divide the image into a regular grid whose node displacements are assigned randomly. A continuous displacement field is then obtained by interpolating between the grid nodes. By adjusting the grid spacing and the magnitude of the prescribed nodal displacements, the spatial frequency and amplitude of the displacement field can be readily controlled.
 
 -Mathematical function based methods. These methods define deformation fields using a variety of mathematical functions, including basic transformations (translation, rotation, stretching, shearing, scaling, and affine transformations) as well as nonlinear deformations (e.g., sinusoidal deformations, displacement jump...).
-
+___
 1. Grid node based models
 -  DataSet from [Boukhtache et al., 2021](https://hal.science/hal-02933431): The first step consisted of splitting each reference image into adjacent square regions of size 8×88 \times 88×8 pixels. The pixels located at the corners of these regions were assigned random displacements. In the second step, the displacement field within each square region was obtained by linear interpolation of the corner displacements. Since the objective was to estimate subpixel displacements, the random displacements were uniformly distributed between −1-1−1 and +1+1+1 pixel. Furthermore, the displacements at the image boundaries were set to zero to reduce errors associated with the lack of information in these regions. This procedure produces a continuous displacement field; however, because the interpolation is piecewise linear, the displacement gradients—and therefore the strain field—are generally discontinuous across the boundaries between adjacent regions.       
  To avoid padding of the cell size (Wang,2026) used larger images 480x480 image for DICnet, apply a grid a grid based displacement as (Boukhtache et al., 2021) with two parameters, grid spacing and maximum node displacement and crop 256x256 pixels region from the central aera of hte original images.
@@ -14,7 +14,7 @@ There are two main types of methods:
   
 ![Image GridC0](Figures/Figs_dataset/Modified_Boukhtache_cell4.png)
 Figure: Example of U and V displacements for a modified Boukhtache et al. (2021) grid method for a cell size of 32 on a reference image of 128x128 pixels. Deformed image is also 128x128 pixels.
-
+___
 
 - Use of Hermite elements to generate displacement fields whose strain field is continuous based on [2023_Wang.pdf](https://doi.org/10.1016/j.optlaseng.2022.107278)
 	This provides with a $C^1$ displacement field.
@@ -23,7 +23,7 @@ Figure: Example of U and V displacements for a modified Boukhtache et al. (2021)
 
 ![Image GridC1](Figures/Figs_dataset/Modified_Hermite_cell4.png)
  Figure : Exemple of displacement fields and deformed image obtained with Hermite grid-based displacement method (cell 32, image 128x128)
-
+___
 - Dataset from [Cheng et al. (2025)](https://doi.org/10.1016/j.optlastec.2024.111414) and [Dan et al. (2025)](https://doi.org/10.1364/OE.553602)
 	Applied deformation random to nodes and Spline interpolation -> Very smooth, displacement is $C^2$
 	Different 'scales' (grid-spacing at which the displacement is randomly chosen) like the previous method to have several frequency of displacement
@@ -37,7 +37,8 @@ Figure: Example of U and V displacements for a modified Boukhtache et al. (2021)
 ![Image GridC2 8](Figures/Figs_dataset/Example_Cheng_2_8.png)
 ![Image GridC2 4](Figures/Figs_dataset/Example_Cheng_2_4.png)
   Figure : Exemple of displacement fields and deformed image obtained with Cheng grid-based displacement method (cells 32, 16, 8, 4 for image 128x128)
-
+___
+___
 2. Mathematical function based displacement
 - Dataset from R. Yang, Y. Li, D. Zeng, P. Guo, Deep dic: Deep learning-based digital 
 image correlation for end-to-end displacement and strain measurement, Journal of Materials Processing Technology 302 (2022) 117474. doi: https://doi.org/10.1016/j.jmatprotec.2021.117474.
@@ -52,8 +53,7 @@ image correlation for end-to-end displacement and strain measurement, Journal of
 ![Image Yang](Figures/Figs_dataset/Example_Yang_0.png)
 Figure : Illustration of Yang's applied displacement on 128x128 pixels image
 	
-
-
+___
 - Original Physics Based Displacement (PBD) Dataset 
 
 	Displacement inspired by what is encountered in mechanics of materials are defined like rigid body, stretching,  high frequency but muche more 
@@ -133,7 +133,7 @@ Further comments
 	Many datasets use a random crop step after the imaged have been deformed. So for instance images of 256x256 are deformed and then a region of 128x128 is randomly croped. It is the same region in the reference and deformed image that is chosen. We saw that for grid based methods, necessary precautions were needed to avoid a zero-displacement padding around the images. We have proposed to pad the existing image with a periodicity assumption. This has the advantage of not requiring larger images. 
 	
 
-
+___
 **Parameters used for dataset generation**
 
 For Reference images folder containing 200 images of 128x128 pixels
