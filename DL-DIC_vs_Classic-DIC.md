@@ -30,10 +30,10 @@ Median RMSE : 0.11735314501279066
 Max RMSE : 8.779842657249894
 
 Illustration on the performance of DIC vs. the cell size of the grid-node displacement methods from large to small.
-![Visu_171_170.png](Figurse/Figs_DIC/Visu_171_170.png)
-![Visu_171_166.png](Figurse/Figs_DIC/Visu_171_166.png)
-![Visu_171_167.png](Figurse/Figs_DIC/Visu_171_167.png)
-![Visu_184_177.png](Figurse/Figs_DIC/Visu_184_177.png)
+![Visu_171_170.png](Figures/Figs_DIC/Visu_171_170.png)
+![Visu_171_166.png](Figures/Figs_DIC/Visu_171_166.png)
+![Visu_171_167.png](Figures/Figs_DIC/Visu_171_167.png)
+![Visu_184_177.png](Figures/Figs_DIC/Visu_184_177.png)
 
 Yang_1px
 Number of images      : 8000
@@ -52,7 +52,7 @@ Median RMSE : 0.08814935228764523
 95th percentile  : 0.16989188148225273
 Max RMSE : 6.476326799733408
 
-![Visu_27_165.png](Figurse/Figs_DIC/Visu_27_165.png)
+![Visu_27_165.png](Figures/Figs_DIC/Visu_27_165.png)
 
 PBD_5_1px
 Number of images      : 8000
@@ -71,7 +71,7 @@ Median RMSE : 0.10991964715101836
 95th percentile  : 0.35249849345846856
 Max RMSE : 14.109419979641409
 
-![Visu_10_177.png](Figurse/Figs_DIC/Visu_10_177.png)
+![Visu_10_177.png](Figures/Figs_DIC/Visu_10_177.png)
 
 
 ------
@@ -95,7 +95,7 @@ Median RMSE : 0.9258147627492652
 95th percentile  : 3.913112819624889
 Max RMSE : 21.600187630561713
 
-![Visu_168_195.png](Figurse/Figs_DIC/Visu_168_195.png)
+![Visu_168_195.png](Figures/Figs_DIC/Visu_168_195.png)
 
 Yang_5px
 Number of images      : 8000
@@ -113,7 +113,7 @@ Median RMSE : 0.5238328806228842
 95th percentile  : 1.194558247977919
 Max RMSE : 12.015759413433614
 
-![Visu_193_170.png](Figurse/Figs_DIC/Visu_193_170.png)
+![Visu_193_170.png](Figures/Figs_DIC/Visu_193_170.png)
 
 PBD_5_5px
 Number of images      : 8000
@@ -133,5 +133,5 @@ Median RMSE : 0.8403916166014225
 95th percentile  : 3.957130044449129
 Max RMSE : 11.48182482686985
 
-![Visu_7_189.png](Figurse/Figs_DIC/Visu_7_189.png)
-![Visu_180_167.png](Figurse/Figs_DIC/Visu_180_167.png)
+![Visu_7_189.png](Figures/Figs_DIC/Visu_7_189.png)
+![Visu_180_167.png](Figures/Figs_DIC/Visu_180_167.png)
