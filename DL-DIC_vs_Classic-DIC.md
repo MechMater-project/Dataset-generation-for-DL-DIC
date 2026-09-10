@@ -8,11 +8,12 @@ cutoff_iteration = 100; # if 50 less accurate
 
 The obtained .mat files are transformed into npy files with mat_to_npy.py. Then RMSE is calculated over the all set of data with RMSE.py.
 
-------
-Results for 1 pixel
 ___
+Results for 1 pixel
+______
 
 GridC1_1px
+___
 
 Number of images      : 8000
 
@@ -49,9 +50,9 @@ Illustration on the performance of DIC vs. the cell size of the grid-node displa
 ![Visu_171_166.png](Figures/Figs_DIC/Visu_171_166.png)
 ![Visu_171_167.png](Figures/Figs_DIC/Visu_171_167.png)
 ![Visu_184_177.png](Figures/Figs_DIC/Visu_184_177.png)
-
+___
 Yang_1px
-
+___
 Number of images      : 8000
 
 Mean max displacement : 0.737222
@@ -79,9 +80,9 @@ Median RMSE : 0.08814935228764523
 Max RMSE : 6.476326799733408
 
 ![Visu_27_165.png](Figures/Figs_DIC/Visu_27_165.png)
-
+___
 PBD_5_1px
-
+___
 Number of images      : 8000
 
 Mean max displacement : 0.774202
@@ -145,8 +146,9 @@ Median RMSE : 0.9258147627492652
 Max RMSE : 21.600187630561713
 
 ![Visu_168_195.png](Figures/Figs_DIC/Visu_168_195.png)
-
+___
 Yang_5px
+___
 Number of images      : 8000
 
 Mean max displacement : 3.686933
@@ -174,8 +176,9 @@ Median RMSE : 0.5238328806228842
 Max RMSE : 12.015759413433614
 
 ![Visu_193_170.png](Figures/Figs_DIC/Visu_193_170.png)
-
+___
 PBD_5_5px
+___
 Number of images      : 8000
 
 Max displacement
