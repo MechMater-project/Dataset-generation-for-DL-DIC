@@ -60,15 +60,11 @@ Figure : Illustration of Yang's applied displacement on 128x128 pixels image
 	Among several types of displacements a random combination of up to $n_{max}$ are applied.
 	
    
- Physical modes:
- 
-	 -Stretching, simple shear, radial displacement, rigid body translation and rotation, localized strain , shear bands, high frequency perturbation, shock wave, warping
-	 
-	 - isotropic_dilation – uniform (thermal-like) expansion, same coefficient in X and Y
-	
-	-`poisson_biaxial – elastic biaxial stretch with εy = -ν·εx coupling
-	
-	-`barreling` – compression counterpart to necking (axis-swapped version of the same band logic)
+ Physical modes: 
+	 -Stretching, simple shear, radial displacement, rigid body translation and rotation, localized strain , shear bands, high frequency perturbation, shock wave, warping	 
+	 - isotropic_dilation – uniform (thermal-like) expansion, same coefficient in X and Y	
+	 - poisson_biaxial – elastic biaxial stretch with εy = -ν·εx coupling		
+	 - barreling – compression counterpart to necking (axis-swapped version of the same band logic)	
 	
 	-`void_coalescence` – 2–4 cavities clustered near each other so their fields interact/merge
 	
