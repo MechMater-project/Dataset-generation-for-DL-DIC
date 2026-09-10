@@ -28,8 +28,7 @@ Aspects to consider for the choice of a loss function:
 
 	- Root mean square error (RMSE)
    
-	$
-	L_{RMSE}=\sqrt{\frac{1}{N}\sum_{i=1}^n (u_i-\hat{u}_i)^2}
+	$L_{RMSE}=\sqrt{\frac{1}{N}\sum_{i=1}^n (u_i-\hat{u}_i)^2}$
 
 	MSE and RMSE similar from a mathematical perspective as their derivatives differ by only a fixed coefficient. So same + and -. 
 	RMSE is used for classic DIC, which explains its use for DL-DIC.
