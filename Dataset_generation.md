@@ -92,7 +92,7 @@ Figure : Illustration of Yang's applied displacement on 128x128 pixels image
  Figure: Illustration of random displacement obtained with coupled PBD displacement ( $n=5$ on 128x128 pixels image)
 
 
-To generate the datasets we build a 200 references images set from one large actual speckle images in which the 128x128 images were cropped randomly in order to obtain a variety of light and density. Each reference image is deformed 200 times with the chosen dataset generation method (GridC0, GridC1, GridC2, Yang, PBD). The parameters used to generate our datasets are given in [[Generated Datasets]].
+To generate the datasets we build a 200 references images set from one large actual speckle images in which the 128x128 images were cropped randomly in order to obtain a variety of light and density. Each reference image is deformed 200 times with the chosen dataset generation method (GridC0, GridC1, GridC2, Yang, PBD). The parameters used to generate our datasets are given below.
 
 
 Other dataset not tested here
@@ -103,8 +103,8 @@ Other dataset not tested here
   Applied displacements include:
 	  **Continuum deformation** (`u_1,v_1`) 
 	    smooth heterogeneous random field
-	    spatially varying strain with randint(50,200) low frequency 200 high frequency 50 - (Similar as [[2021_Boukhtache_et_al.pdf]] for linear interpolation and similar as [[2024_Cheng.pdf]] for cubic interpolation)
-	  Affine deformation (`u_4,v_4`) (This is the same as in [[2021_Yang.pdf]])
+	    spatially varying strain with randint(50,200) low frequency 200 high frequency 50 - (Similar as (Boukhtache et al., 2021) for linear interpolation and similar as (Cheng et al., 2025) for cubic interpolation)
+	  Affine deformation (`u_4,v_4`) (This is the same as in (Yang et al., 2022)
 	    translation
 	    rotation
 	    stretch
