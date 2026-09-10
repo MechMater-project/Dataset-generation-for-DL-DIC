@@ -24,7 +24,7 @@ Figure: Example of U and V displacements for a modified Boukhtache et al. (2021)
 ![Image GridC1](Figures/Figs_dataset/Modified_Hermite_cell4.png)
  Figure : Exemple of displacement fields and deformed image obtained with Hermite grid-based displacement method (cell 32, image 128x128)
 
-- Dataset [[2025_Cheng.pdf]] (https://doi.org/10.1016/j.optlastec.2024.111414) and [[2025_Dan.pdf]](https://doi.org/10.1364/OE.553602)
+- Dataset from [Cheng et al. (2025)](https://doi.org/10.1016/j.optlastec.2024.111414) and [Dan et al. (2025)](https://doi.org/10.1364/OE.553602)
 	Applied deformation random to nodes and Spline interpolation -> Very smooth, displacement is $C^2$
 	Different 'scales' (grid-spacing at which the displacement is randomly chosen) like the previous method to have several frequency of displacement
 	Bicubic interpolation 
@@ -32,16 +32,17 @@ Figure: Example of U and V displacements for a modified Boukhtache et al. (2021)
 	Add of a random grayscale noise with a mean of 0 and a standard deviation of 4 
 	
 	Cheng uses cubic `RectBivariateSpline` rather than bilinear `RegularGridInterpolator`. It was adpated as Boukhtache and Hermite with periodic padding to avoid the undeformed edges and with random position of the grid to avoid grid lines
-  ![[Example_Cheng_2_32.png]]
-  ![[Example_Cheng_2_16.png]]![[Example_Cheng_2_8.png]]
-  ![[Example_Cheng_2_4.png]]
+![Image GridC2 32](Figures/Figs_dataset/Example_Cheng_2_32.png)
+![Image GridC2 16](Figures/Figs_dataset/Example_Cheng_2_16.png)
+![Image GridC2 8](Figures/Figs_dataset/Example_Cheng_2_8.png)
+![Image GridC2 4](Figures/Figs_dataset/Example_Cheng_2_4.png)
   Figure : Exemple of displacement fields and deformed image obtained with Cheng grid-based displacement method (cells 32, 16, 8, 4 for image 128x128)
 
 2. Mathematical function based displacement
 - Dataset from R. Yang, Y. Li, D. Zeng, P. Guo, Deep dic: Deep learning-based digital 
 image correlation for end-to-end displacement and strain measurement, Journal of Materials Processing Technology 302 (2022) 117474. doi: https://doi.org/10.1016/j.jmatprotec.2021.117474.
 	A two-dimensional displacement field is generated for each sample image by combining random rigid-body translation, rotation, stretch/compression, shear, and localized deformations described by two-dimensional Gaussian functions.
-	![[Equations_Yang2022.pdf]]
+	![equations Yang](Figures/Equations_Yang2022.pdf)
  .       Definition of the displacement strain field.
 	The first part is affine and is homogeneous in the image for stretch, shear, translation and rotation. The second part (Gaussian displacement) adds some strain gradients, localization and multiscale deformations. The displacement is maximum at $(x_0,y_0)$ and decay on the sides. As $\epsilon_{xx} = \frac{\partial u_g}{\partial x} = - A \frac{x-x_0}{\sigma_x^2} u_g$, one side is in compression and the other in tension. Note that if only $u_g$ is activated: shear band, If $u_g$ ad $v_g$ are centered differently: crack opening displacement, If $\sigma_x>>\sigma_y$: necking
 	
