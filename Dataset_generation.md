@@ -16,7 +16,7 @@ There are two main types of methods:
 Figure: Example of U and V displacements for a modified Boukhtache et al. (2021) grid method for a cell size of 32 on a reference image of 128x128 pixels. Deformed image is also 128x128 pixels.
 
 
-- Use of Hermite elements to generate displacement fields whose strain field is continuous based on [[2023_Wang.pdf]] (https://doi.org/10.1016/j.optlaseng.2022.107278)
+- Use of Hermite elements to generate displacement fields whose strain field is continuous based on [2023_Wang.pdf](https://doi.org/10.1016/j.optlaseng.2022.107278)
 	This provides with a $C^1$ displacement field.
 	They introduced different cell dimensions (5,9,17,33,65) for each generated sample, which creates a multi-frequency training set and is probably one of the reasons their network generalizes well over a large range of strain levels.
     The difference with pre-cited paper is that 1) we directly deform the reference images (while they proposed to create reference images from deformed images with inverse Hermite elements) 2) we add padding by image periodicity 3) the start of the grid varies instead of always being at (0,0) 4) We use a scaling law $u_x = \frac{\partial u}{\partial x}=u_{max}/h$  and $u_{xy} = u_{max}/h^2$ with $h$ the dimension of the elements and $u_{max}$ is the maximum displacement otherwise the fields become extremely oscillatory. 
@@ -61,18 +61,31 @@ Figure : Illustration of Yang's applied displacement on 128x128 pixels image
 	
    
  Physical modes:
+ 
 	 -Stretching, simple shear, radial displacement, rigid body translation and rotation, localized strain , shear bands, high frequency perturbation, shock wave, warping
-    -isotropic_dilation` – uniform (thermal-like) expansion, same coefficient in X and Y
-	-`poisson_biaxial` – elastic biaxial stretch with εy = -ν·εx coupling
+	 
+	 - isotropic_dilation – uniform (thermal-like) expansion, same coefficient in X and Y
+	
+	-`poisson_biaxial – elastic biaxial stretch with εy = -ν·εx coupling
+	
 	-`barreling` – compression counterpart to necking (axis-swapped version of the same band logic)
+	
 	-`void_coalescence` – 2–4 cavities clustered near each other so their fields interact/merge
+	
 	-`crack_tip_KI` / `crack_tip_KII` – real Williams LEFM near-tip fields (√r singularity + angular dependence), replacing the tanh approximation for anyone who needs physically accurate fracture data. I kept your original `crack_open`/`crack_slide` too, since the smoothed step is still a cheap, useful discontinuity-like mode — the docstring now clarifies when to prefer which.
+	
 	-`contact_indentation` – Hertzian-inspired localized push + lateral pile-up
+	
 	-`delamination_blister` – ring-shaped profile (peaks at the delamination front, not the center), distinct from `inclusion`/`cavity`
+	
 	-`buckling` now sums 1–2 harmonics instead of a single sine, for more realistic wrinkle patterns
+	
 	-Added an optional `max_total_disp` cap that rescales the combined field per-pixel so stacking up to 5 modes can't produce runaway displacements
+	
 	-Added `nu` (Poisson's ratio) and `plane_stress` parameters, threaded through to `process_images`, since the crack-tip and biaxial modes need them
-	-Comments throughout explaining the physical meaning of each mode and, where two modes look similar (`radial_disp` vs `cavity`, `inclusion` vs`delamination_blister`), a note on how they actually differ Wrapped the script's execution in `if __name__ == "__main__":` so the module can be imported without auto-running
+	
+	-Comments throughout explaining the physical meaning of each mode and, where two modes look similar (`radial_disp` vs `cavity`, `inclusion` 
+vs`delamination_blister`), a note on how they actually differ Wrapped the script's execution in `if __name__ == "__main__":` so the module can be imported without auto-running
  
  One thing worth deciding: the crack-tip `K_I`/`K_II` amplitudes are _synthetic_ units scaled by `max_disp`, not real stress-intensity factors in MPa·√m 
 ![Image PBD 0](Figures/Figs_dataset/Example_PBD_0.png)
@@ -122,7 +135,7 @@ Further comments
 	
 
 
-**Parameters**
+**Parameters used for dataset generation**
 
 For Reference images folder containing 200 images of 128x128 pixels
 
