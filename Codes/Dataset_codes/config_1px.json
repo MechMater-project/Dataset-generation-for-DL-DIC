@@ -1,0 +1,99 @@
+{
+    "_comment": "Edit any value below to change how deformation fields are generated. See JD_2025_V3.py for what each parameter controls.",
+
+    "input_folder": "../Ref_MO_128x128",
+    "output_folder": "GeneratedJD1px_2",
+    "num_deformations": 200,
+
+    "fixed_mode": null,
+    "_fixed_mode_comment": "Set to one mode name (e.g. \"necking\") to generate every sample with ONLY that mode, ignoring min_modes/max_modes. Leave as null for normal random 1-5 mode mixing. Can also be a list of names to fix a specific combination.",
+    "_available_modes": [
+        "stretch_x", "stretch_y", "shear_x", "shear_y",
+        "translation", "rotation", "isotropic_dilation", "poisson_biaxial",
+        "localized_disp", "shear_band", "high_freq", "radial_disp",
+        "necking", "barreling", "bending", "torsion",
+        "cavity", "inclusion", "void_coalescence",
+        "crack_open", "crack_slide", "crack_tip_KI", "crack_tip_KII",
+        "buckling", "contact_indentation", "delamination_blister"
+    ],
+
+    "max_disp": 0.8,
+    "max_total_disp": 1.0,
+    "rotation_max": 0.5,
+    "translation_max": 0.5,
+
+    "min_modes": 1,
+    "max_modes": 5,
+
+    "nu_max": 0.5,
+    "plane_stress_probability": 0.5,
+
+    "localized_disp": {
+        "n_min": 1,
+        "n_max": 3,
+        "pos_range": 0.5,
+        "sigma_min": 0.1,
+        "sigma_max": 0.3
+    },
+    "shear_band": {
+        "pos_range": 0.5,
+        "width_min": 0.05,
+        "width_max": 0.1
+    },
+    "high_freq": {
+        "k_min": 5,
+        "k_max": 50
+    },
+    "necking": {
+        "sigma_min": 0.2,
+        "sigma_max": 0.5
+    },
+    "barreling": {
+        "sigma_min": 0.2,
+        "sigma_max": 0.5
+    },
+    "cavity": {
+        "pos_range": 0.3
+    },
+    "inclusion": {
+        "pos_range": 0.3,
+        "sigma_min": 0.1,
+        "sigma_max": 0.3
+    },
+    "void_coalescence": {
+        "n_min": 2,
+        "n_max": 5,
+        "cluster_pos_range": 0.3,
+        "spread_min": 0.05,
+        "spread_max": 0.15
+    },
+    "crack_open": {
+        "pos_range": 0.2,
+        "delta_min": 0.02,
+        "delta_max": 0.1
+    },
+    "crack_slide": {
+        "pos_range": 0.2,
+        "delta_min": 0.02,
+        "delta_max": 0.1
+    },
+    "crack_tip": {
+        "pos_range": 0.3
+    },
+    "buckling": {
+        "n_harmonics_min": 1,
+        "n_harmonics_max": 2,
+        "k_min": 2,
+        "k_max": 8
+    },
+    "contact_indentation": {
+        "pos_range": 0.5,
+        "a_min": 0.05,
+        "a_max": 0.2
+    },
+    "delamination_blister": {
+        "pos_range": 0.3,
+        "sigma_min": 0.08,
+        "sigma_max": 0.2
+    }
+}
