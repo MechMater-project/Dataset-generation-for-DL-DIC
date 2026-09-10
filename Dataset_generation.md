@@ -21,7 +21,7 @@ Figure: Example of U and V displacements for a modified Boukhtache et al. (2021)
 	They introduced different cell dimensions (5,9,17,33,65) for each generated sample, which creates a multi-frequency training set and is probably one of the reasons their network generalizes well over a large range of strain levels.
     The difference with pre-cited paper is that 1) we directly deform the reference images (while they proposed to create reference images from deformed images with inverse Hermite elements) 2) we add padding by image periodicity 3) the start of the grid varies instead of always being at (0,0) 4) We use a scaling law $u_x = \frac{\partial u}{\partial x}=u_{max}/h$  and $u_{xy} = u_{max}/h^2$ with $h$ the dimension of the elements and $u_{max}$ is the maximum displacement otherwise the fields become extremely oscillatory. 
 
-![[Modified_Hermite_cell4.png]]
+![Image GridC1](Figures/Figs_dataset/Modified_Hermite_cell4.png)
  Figure : Exemple of displacement fields and deformed image obtained with Hermite grid-based displacement method (cell 32, image 128x128)
 
 - Dataset [[2025_Cheng.pdf]] (https://doi.org/10.1016/j.optlastec.2024.111414) and [[2025_Dan.pdf]](https://doi.org/10.1364/OE.553602)
@@ -48,7 +48,7 @@ image correlation for end-to-end displacement and strain measurement, Journal of
 	Note: The type of applied strain is rather smoth and all types of deformation are applied on all deformed images
 	
 
-![[Example_Yang_0.png]]
+![Image Yang](Figures/Figs_dataset/Example_Yang_0.png)
 Figure : Illustration of Yang's applied displacement on 128x128 pixels image
 	
 
@@ -74,8 +74,8 @@ Figure : Illustration of Yang's applied displacement on 128x128 pixels image
 	-Comments throughout explaining the physical meaning of each mode and, where two modes look similar (`radial_disp` vs `cavity`, `inclusion` vs`delamination_blister`), a note on how they actually differ Wrapped the script's execution in `if __name__ == "__main__":` so the module can be imported without auto-running
  
  One thing worth deciding: the crack-tip `K_I`/`K_II` amplitudes are _synthetic_ units scaled by `max_disp`, not real stress-intensity factors in MPa·√m 
- ![[Example_PBD_0.png]]
- ![[Example_PBD_1.png]]
+![Image PBD 0](Figures/Figs_dataset/Example_PBD_0.png)
+![Image PBD 1](Figures/Figs_dataset/Example_PBD_1.png)
  Figure: Illustration of random displacement obtained with coupled PBD displacement ( $n=5$ on 128x128 pixels image)
 
 
@@ -126,37 +126,37 @@ Further comments
 For Reference images folder containing 200 images of 128x128 pixels
 
 - Subpixel datasets
-	GridC0_1px (GridC0_Boukhtache2021.py)
+	[GridC0_1px](Codes/Dataset_codes/GridC0_Boukhtache2021.py)
 	cell_size2 = [4,8,16,32] 
 	TARGET_MAX_DISP = 1.0
 
-	GridC1_2 (GridC1_Hermite.py)
+	[GridC1_1px](Codes/Dataset_codes/GridC1_Hermite.py)
 	element_size = [4,8,16,32]
 	TARGET_MAX_DISP = 1.0
 	max_disp = 0.58 * TARGET_MAX_DISP   
 	max_grad_factor = 1.0     
 	max_cross_factor = 1.0 
 
-	GridC2_1px (GridC2_Cheng2025.py)
+	[GridC2_1px](Codes/Dataset_codes/GridC2_Cheng2025.py)
 	noise_std = 0
 	max_disp = 1
 	scales = [ 32, 16, 8, 4] # Randomly chosen
 
-	Yang_1px (Yang_2022.py) and PBD_X_1px (PBD_2026.py): config_1px.json
+	[Yang_1px](Codes/Dataset_codes/Yang_2022.py) and [PBD_X_1px](Codes/Dataset_codes/PBD_2026.py): [config_1px.json](Codes/Dataset_codes/config_1px.json)
 	
 
 - 5 pixels datasets
-	Yang5px (Yang_2022.py) and PBD_X_5px (PBD_2026.py): config_5px.json
+	[Yang5px](Codes/Dataset_codes/Yang_2022.py) and [PBD_X_5px](Codes/Dataset_codes/PBD_2026.py): [config_1px.json](Codes/Dataset_codes/config_5px.json)
 	
-	GridC0_5px (GridC0_Boukhtache2021.py)
+	[GridC0_5px](Codes/Dataset_codes/GridC0_Boukhtache2021.py)
 	cell_size2 = [4,8,16,32] 
 	TARGET_MAX_DISP = 5.0
 	
-	GridC1_5px (GridC1_Hermite.py)
+	[GridC1_5px](Codes/Dataset_codes/GridC1_Hermite.py)
 	element_size = [4,8,16,32]
 	TARGET_MAX_DISP = 5.0
 	
-	GridC2_5px (GridC2_Cheng2025.py)
+	[GridC2_5px](Codes/Dataset_codes/GridC2_Cheng2025.py)
 	noise_std = 0
 	max_disp = 5
 	scales = [ 32, 16, 8, 4] # Randomly chosen
