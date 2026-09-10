@@ -13,6 +13,7 @@ Results for 1 pixel
 ___
 
 GridC1_1px
+
 Number of images      : 8000
 
 Applied displacement analysis:
@@ -50,6 +51,7 @@ Illustration on the performance of DIC vs. the cell size of the grid-node displa
 ![Visu_184_177.png](Figures/Figs_DIC/Visu_184_177.png)
 
 Yang_1px
+
 Number of images      : 8000
 
 Mean max displacement : 0.737222
@@ -79,6 +81,7 @@ Max RMSE : 6.476326799733408
 ![Visu_27_165.png](Figures/Figs_DIC/Visu_27_165.png)
 
 PBD_5_1px
+
 Number of images      : 8000
 
 Mean max displacement : 0.774202
@@ -108,11 +111,13 @@ Max RMSE : 14.109419979641409
 ![Visu_10_177.png](Figures/Figs_DIC/Visu_10_177.png)
 
 
-------
+_____________________
 Results for 5 pixels
-___
+_____________________
 
 GridC1_5px
+_____________________
+
 Number of images      : 8000
 
 Mean max displacement : 3.952496
