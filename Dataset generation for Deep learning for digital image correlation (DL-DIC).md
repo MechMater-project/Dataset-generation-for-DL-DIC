@@ -8,7 +8,7 @@ DICTr: https://github.com/vincentjzy/dictr
 Supervised DL-DIC neural networks, requires for training a dataset with reference images, deformed images and displacement fields in horizontal direction (U) and vertical direction (V)
 Here we propose, six different  [[Dataset generation method]] as well as a combination of two methods for the seventh.
 
-Models's performance is assess through the [Loss function](Loss function.md).
+Models's performance is assess through the [Loss function](Loss_function.md).
 
 We used open source Ncorr DIC for comparison [[DL-DIC vs. Classic DIC]]
 
