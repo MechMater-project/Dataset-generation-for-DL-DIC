@@ -61,29 +61,32 @@ Figure : Illustration of Yang's applied displacement on 128x128 pixels image
 	
    
  Physical modes: 
+ 
 	 -Stretching, simple shear, radial displacement, rigid body translation and rotation, localized strain , shear bands, high frequency perturbation, shock wave, warping	 
+	 
 	 - isotropic_dilation – uniform (thermal-like) expansion, same coefficient in X and Y	
+	 
 	 - poisson_biaxial – elastic biaxial stretch with εy = -ν·εx coupling		
+	 
 	 - barreling – compression counterpart to necking (axis-swapped version of the same band logic)	
 	
-	-`void_coalescence` – 2–4 cavities clustered near each other so their fields interact/merge
+	- Void_coalescence – 2–4 cavities clustered near each other so their fields interact/merge
 	
-	-`crack_tip_KI` / `crack_tip_KII` – real Williams LEFM near-tip fields (√r singularity + angular dependence), replacing the tanh approximation for anyone who needs physically accurate fracture data. I kept your original `crack_open`/`crack_slide` too, since the smoothed step is still a cheap, useful discontinuity-like mode — the docstring now clarifies when to prefer which.
+	- crack_tip_KI / crack_tip_KII – real Williams LEFM near-tip fields (√r singularity + angular dependence), replacing the tanh approximation for anyone who needs physically accurate fracture data. I kept your original crack_open/crack_slide too, since the smoothed step is still a cheap, useful discontinuity-like mode — the docstring now clarifies when to prefer which.
 	
-	-`contact_indentation` – Hertzian-inspired localized push + lateral pile-up
+	- contact_indentation – Hertzian-inspired localized push + lateral pile-up
 	
-	-`delamination_blister` – ring-shaped profile (peaks at the delamination front, not the center), distinct from `inclusion`/`cavity`
+	- delamination_blister – ring-shaped profile (peaks at the delamination front, not the center), distinct from `inclusion`/`cavity`
 	
-	-`buckling` now sums 1–2 harmonics instead of a single sine, for more realistic wrinkle patterns
+	- buckling now sums 1–2 harmonics instead of a single sine, for more realistic wrinkle patterns
 	
-	-Added an optional `max_total_disp` cap that rescales the combined field per-pixel so stacking up to 5 modes can't produce runaway displacements
+	- Added an optional max_total_disp cap that rescales the combined field per-pixel so stacking up to 5 modes can't produce runaway displacements
 	
-	-Added `nu` (Poisson's ratio) and `plane_stress` parameters, threaded through to `process_images`, since the crack-tip and biaxial modes need them
+	- Added nu (Poisson's ratio) and plane_stres` parameters, threaded through to `rocess_images, since the crack-tip and biaxial modes need them
 	
-	-Comments throughout explaining the physical meaning of each mode and, where two modes look similar (`radial_disp` vs `cavity`, `inclusion` 
-vs`delamination_blister`), a note on how they actually differ Wrapped the script's execution in `if __name__ == "__main__":` so the module can be imported without auto-running
+	- Comments throughout explaining the physical meaning of each mode and, where two modes look similar (radial_disp vs cavity, inclusion vs delamination_blister), a note on how they actually differ Wrapped the script's execution in `if __name__ == "__main__":` so the module can be imported without auto-running
  
- One thing worth deciding: the crack-tip `K_I`/`K_II` amplitudes are _synthetic_ units scaled by `max_disp`, not real stress-intensity factors in MPa·√m 
+ One thing worth deciding: the crack-tip K_I/K_II amplitudes are _synthetic_ units scaled by max_disp, not real stress-intensity factors in MPa·√m 
 ![Image PBD 0](Figures/Figs_dataset/Example_PBD_0.png)
 ![Image PBD 1](Figures/Figs_dataset/Example_PBD_1.png)
  Figure: Illustration of random displacement obtained with coupled PBD displacement ( $n=5$ on 128x128 pixels image)
