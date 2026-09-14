@@ -155,11 +155,15 @@ For Reference images folder containing 200 images of 128x128 pixels
 	max_disp = 1
 	scales = [ 32, 16, 8, 4] # Randomly chosen
 
-	[Yang_1px](Codes/Dataset_codes/Yang_2022.py) and [PBD_X_1px](Codes/Dataset_codes/PBD_2026.py): [config_1px.json](Codes/Dataset_codes/config_1px.json)
+	[Yang_1px](Codes/Dataset_codes/Yang_2022.py) max_disp=1
+
+    [PBD_X_1px](Codes/Dataset_codes/PBD_2026.py): [config_1px.json](Codes/Dataset_codes/config_1px.json)
 	
 
 - 5 pixels datasets
-	[Yang5px](Codes/Dataset_codes/Yang_2022.py) and [PBD_X_5px](Codes/Dataset_codes/PBD_2026.py): [config_1px.json](Codes/Dataset_codes/config_5px.json)
+	[Yang5px](Codes/Dataset_codes/Yang_2022.py) max_disp=5
+
+    [PBD_X_5px](Codes/Dataset_codes/PBD_2026.py): [config_5px.json](Codes/Dataset_codes/config_5px.json)
 	
 	[GridC0_5px](Codes/Dataset_codes/GridC0_Boukhtache2021.py)
 	cell_size2 = [4,8,16,32] 
